@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mahalakshmi Nagarajan | Data Engineer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0e24;--fg:#f1f4ff;--mut:#aab4d8;--c1:#7c5cff;--c2:#00d4ff;--c3:#ff4d8d;--c4:#ffb84d;--card:rgba(255,255,255,.08);--bd:rgba(255,255,255,.2);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#eef1ff;--fg:#141a36;--mut:#4a5580;--card:rgba(255,255,255,.75);--bd:rgba(20,26,54,.14)}}
+:root[data-theme="light"]{--bg:#eef1ff;--fg:#141a36;--mut:#4a5580;--card:rgba(255,255,255,.75);--bd:rgba(20,26,54,.14)}
+:root[data-theme="dark"]{--bg:#0a0e24;--fg:#f1f4ff;--mut:#aab4d8;--card:rgba(255,255,255,.08);--bd:rgba(255,255,255,.2)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+*{box-sizing:border-box}
+body{margin:0;height:100%;background:var(--bg);color:var(--fg);font-family:'Sora',system-ui,sans-serif;overflow:hidden}
+.orb{position:fixed;border-radius:50%;filter:blur(60px);opacity:.55;animation:fl 14s ease-in-out infinite alternate;pointer-events:none}
+.o1{width:260px;height:260px;background:var(--c1);top:-60px;left:-60px}
+.o2{width:300px;height:300px;background:var(--c3);bottom:-80px;right:-80px;animation-delay:-5s}
+.o3{width:200px;height:200px;background:var(--c2);top:40%;left:55%;animation-delay:-9s}
+@keyframes fl{to{transform:translate(40px,-50px) scale(1.2)}}
+.stage{position:relative;height:calc(100% - 84px);perspective:1200px}
+.page{position:absolute;inset:0;padding:20px 20px 8px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;overflow-y:auto;opacity:0;transform:translateX(70px) rotateY(-18deg);pointer-events:none;transition:opacity .6s,transform .7s cubic-bezier(.2,.8,.2,1)}
+.page.on{opacity:1;transform:none;pointer-events:auto}
+.page.past{transform:translateX(-70px) rotateY(18deg)}
+.inner{width:100%;max-width:760px;margin:auto}
+h1{font-size:clamp(30px,8vw,56px);line-height:1.05;margin:18px 0 10px;font-weight:800;background:linear-gradient(90deg,var(--c2),var(--c1),var(--c3));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(24px,6vw,38px);margin:0 0 18px;font-weight:800}
+p{color:var(--mut);line-height:1.6;margin:6px auto;max-width:520px}
+.scene{width:160px;height:160px;perspective:700px;margin:10px auto 30px}
+.cube{width:100%;height:100%;position:relative;transform-style:preserve-3d;animation:spin 14s linear infinite}
+.cube div{position:absolute;width:140px;height:140px;left:10px;top:10px;display:grid;place-items:center;font-weight:800;font-size:22px;color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:16px;backdrop-filter:blur(2px)}
+.cube div:nth-child(1){transform:translateZ(70px);background:rgba(124,92,255,.75)}
+.cube div:nth-child(2){transform:rotateY(180deg) translateZ(70px);background:rgba(0,212,255,.7)}
+.cube div:nth-child(3){transform:rotateY(90deg) translateZ(70px);background:rgba(255,77,141,.7)}
+.cube div:nth-child(4){transform:rotateY(-90deg) translateZ(70px);background:rgba(255,184,77,.75)}
+.cube div:nth-child(5){transform:rotateX(90deg) translateZ(70px);background:rgba(40,200,140,.7)}
+.cube div:nth-child(6){transform:rotateX(-90deg) translateZ(70px);background:rgba(90,120,255,.75)}
+@keyframes spin{from{transform:rotateX(-20deg) rotateY(0)}to{transform:rotateX(-20deg) rotateY(360deg)}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:20px 14px;transform-style:preserve-3d;transition:transform .15s;backdrop-filter:blur(8px);text-align:center}
+.card .ic{font-size:38px;display:block;transform:translateZ(40px);margin-bottom:6px}
+.card b{display:block;transform:translateZ(25px)}
+.card small{color:var(--mut);display:block;margin-top:4px;transform:translateZ(15px)}
+.bar{height:6px;border-radius:6px;background:var(--bd);margin-top:12px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:6px;transition:width 1.2s .4s}
+.on .bar i{width:var(--w)}
+.cat{text-align:left}
+.cat h3{margin:0 0 10px;font-size:16px}
+.chip{display:inline-block;padding:5px 11px;margin:3px 3px 0 0;border-radius:99px;font-size:13px;color:#fff}
+.tl{text-align:left;border-left:3px solid var(--c1);margin-left:10px;padding-left:18px}
+.role{position:relative;margin-bottom:16px}
+.role:before{content:"";position:absolute;left:-28px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--c2);box-shadow:0 0 0 4px rgba(0,212,255,.25)}
+.role b{display:block}
+.role span{color:var(--mut);font-size:14px}
+.btn{display:inline-block;margin-top:18px;padding:12px 22px;border-radius:99px;background:linear-gradient(90deg,var(--c1),var(--c3));color:#fff;text-decoration:none;font-weight:600}
+nav{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;justify-content:space-between;gap:10px}
+nav button{border:0;border-radius:99px;padding:12px 22px;font:600 15px 'Sora',sans-serif;color:#fff;background:linear-gradient(90deg,var(--c1),var(--c2));cursor:pointer}
+nav button:disabled{opacity:.3}
+nav button:focus-visible,.btn:focus-visible{outline:3px solid var(--c4);outline-offset:2px}
+.dots{display:flex;gap:8px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--bd);transition:.3s}
+.dots i.on{background:var(--c3);transform:scale(1.4)}
+@media (prefers-reduced-motion:reduce){.cube,.orb{animation:none}.page{transition:opacity .3s}}
+</style>
+</head>
+<body>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+<div class="stage">
+  <section class="page on"><div class="inner">
+    <div class="scene"><div class="cube"><div>SQL</div><div>Power BI</div><div>Java</div><div>Excel</div><div>ETL</div><div>Data</div></div></div>
+    <h1>Mahalakshmi Nagarajan</h1>
+    <h2 style="font-size:20px;margin-bottom:8px">Aspiring Data Engineer</h2>
+    <p>I turn large volumes of healthcare data into clean pipelines and clear dashboards. B.Sc. in Computer Science with 3+ years of experience in data processing and US healthcare accounts receivable.</p>
+  </div></section>
+
+  <section class="page"><div class="inner">
+    <h2>Languages & Tools</h2>
+    <div class="grid">
+      <div class="card"><span class="ic">🗄️</span><b>SQL</b><small>Queries, joins, window functions</small><div class="bar"><i style="--w:90%;background:var(--c2)"></i></div></div>
+      <div class="card"><span class="ic">☕</span><b>Java</b><small>Core programming</small><div class="bar"><i style="--w:70%;background:var(--c4)"></i></div></div>
+      <div class="card"><span class="ic">📊</span><b>Power BI</b><small>Dashboards and DAX</small><div class="bar"><i style="--w:85%;background:var(--c3)"></i></div></div>
+      <div class="card"><span class="ic">📗</span><b>Excel</b><small>Analysis and reporting</small><div class="bar"><i style="--w:92%;background:var(--c1)"></i></div></div>
+    </div>
+  </div></section>
+
+  <section class="page"><div class="inner">
+    <h2>What I Know</h2>
+    <div class="grid">
+      <div class="card cat"><h3>🚀 Data Engineering</h3><span class="chip" style="background:#7c5cff">Apache Spark</span><span class="chip" style="background:#ff4d8d">Airflow</span><span class="chip" style="background:#0aa5d6">Azure Data Factory</span></div>
+      <div class="card cat"><h3>🗃️ Databases</h3><span class="chip" style="background:#0aa5d6">MySQL</span><span class="chip" style="background:#7c5cff">SQL Server</span><span class="chip" style="background:#d98a1a">PostgreSQL</span></div>
+      <div class="card cat"><h3>📈 Analytics & BI</h3><span class="chip" style="background:#ff4d8d">Power BI</span><span class="chip" style="background:#28a878">DAX</span><span class="chip" style="background:#7c5cff">Excel</span></div>
+      <div class="card cat"><h3>🏥 Domain</h3><span class="chip" style="background:#28a878">US Healthcare AR</span><span class="chip" style="background:#d98a1a">Claims data</span><span class="chip" style="background:#ff4d8d">Denial analysis</span></div>
+    </div>
+  </div></section>
+
+  <section class="page"><div class="inner">
+    <h2>My Experience</h2>
+    <div class="tl">
+      <div class="role"><b>Senior Executive, Accounts Receivable</b><span>Guided claim quality, resolved complex follow-ups, reported on results</span></div>
+      <div class="role"><b>Associate, Insurance AR</b><span>Worked insurance claims, denials and payer follow-ups</span></div>
+      <div class="role"><b>Accounts Receivable Executive</b><span>Handled large claim volumes with high accuracy</span></div>
+      <div class="role"><b>Process Executive, Data</b><span>Processed and validated data to meet daily targets</span></div>
+    </div>
+  </div></section>
+
+  <section class="page"><div class="inner">
+    <div class="scene" style="width:120px;height:120px;margin-bottom:10px"><div class="cube" style="animation-duration:9s"><div style="width:100px;height:100px;transform:translateZ(50px)">Hi</div><div style="width:100px;height:100px;transform:rotateY(180deg) translateZ(50px)">SQL</div><div style="width:100px;height:100px;transform:rotateY(90deg) translateZ(50px)">BI</div><div style="width:100px;height:100px;transform:rotateY(-90deg) translateZ(50px)">Java</div><div style="width:100px;height:100px;transform:rotateX(90deg) translateZ(50px)">XL</div><div style="width:100px;height:100px;transform:rotateX(-90deg) translateZ(50px)">ETL</div></div></div>
+    <h2>Let's Connect</h2>
+    <p>I'm growing into Data Engineering and happy to talk about data, SQL and Power BI.</p>
+    <a class="btn" href="https://github.com/laksh9488" target="_blank" rel="noopener">View my GitHub</a>
+  </div></section>
+</div>
+<nav><button id="b">Back</button><div class="dots"></div><button id="n">Next</button></nav>
+<script>
+var P=[].slice.call(document.querySelectorAll('.page')),i=0,D=document.querySelector('.dots'),B=document.getElementById('b'),N=document.getElementById('n');
+P.forEach(function(){D.appendChild(document.createElement('i'))});
+function go(k){i=Math.max(0,Math.min(P.length-1,k));P.forEach(function(p,j){p.classList.toggle('on',j==i);p.classList.toggle('past',j<i)});[].forEach.call(D.children,function(d,j){d.classList.toggle('on',j==i)});B.disabled=i==0;N.disabled=i==P.length-1}
+B.onclick=function(){go(i-1)};N.onclick=function(){go(i+1)};
+document.addEventListener('keydown',function(e){if(e.key=='ArrowRight')go(i+1);if(e.key=='ArrowLeft')go(i-1)});
+var sx=0;document.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+document.addEventListener('touchend',function(e){var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>60)go(d<0?i+1:i-1)});
+document.querySelectorAll('.card').forEach(function(c){
+c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='rotateY('+x*24+'deg) rotateX('+-y*24+'deg)'});
+c.addEventListener('pointerleave',function(){c.style.transform=''})});
+go(0);
+</script>
+</body>
+</html>
